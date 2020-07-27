@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useNetwork } from './useNetwork';
 
 export const usePicture = (date) => {

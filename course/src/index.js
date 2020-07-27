@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './current/App';
+import { App } from './11-whats-app/App';
 
 ReactDOM.render(
   <React.StrictMode>
