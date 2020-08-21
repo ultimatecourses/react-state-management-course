@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 export const useScrollToBottom = (messages) => {
   let scrollContainer = useRef();

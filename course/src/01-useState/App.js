@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import { StatusField } from './StatusField';
+import { Status } from './Status';
 
 export const App = () => {
-  let [messages, setMessages] = useState([]);
-  console.log(messages);
+  let [messages, setMessages] = useState(['test', 'test2']);
+
   return (
     <div>
-      <StatusField onEnter={(value) => setMessages([value, ...messages])} />
-
+      <Status onEnter={(value) => setMessages([value, ...messages])} />
       <ul>
-        {messages.map((message, index) => (
-          <li key={index}>{message}</li>
+        {messages.map((message) => (
+          <li key={message}>{message}</li>
         ))}
       </ul>
     </div>

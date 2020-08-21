@@ -12,7 +12,20 @@ export const useFakeConvo = (setMessages) => {
   useFakeMessage({
     setMessages,
     message: 'So what should we do now....',
-    timeout: 5000,
+  });
+  useFakeMessage({
+    setMessages,
+    message: 'So what should we do now....',
+  });
+
+  useFakeMessage({
+    setMessages,
+    message: 'So what should we do now....',
+  });
+
+  useFakeMessage({
+    setMessages,
+    message: 'So what should we do now....',
   });
 
   useFakeMessage({

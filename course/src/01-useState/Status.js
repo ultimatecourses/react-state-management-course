@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const StatusField = ({ onEnter }) => {
+export const Status = ({ onEnter }) => {
   let [message, setMessage] = useState('');
 
   return (

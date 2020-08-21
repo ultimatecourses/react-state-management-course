@@ -4,7 +4,7 @@ export const useFakeMessage = ({
   setMessages,
   message,
   from = 'Test',
-  timeout,
+  timeout = 5000,
 }) => {
   useEffect(() => {
     setTimeout(() => {
@@ -12,6 +12,6 @@ export const useFakeMessage = ({
         ...messages,
         { id: messages.length + 1, content: message, from },
       ]);
-    }, timeout || 5000);
-  }, [message, from, setMessages, timeout]);
+    }, timeout);
+  }, [setMessages, message, from, timeout]);
 };
