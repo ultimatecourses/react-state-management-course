@@ -13,7 +13,8 @@ const reducer = (state, action) => {
     case 'addMessage':
       return {
         ...state,
-        currentMessage: '',
+        highlightedMessageId: '',
+        currentMessage: action.from === 'me' ? '' : state.currentMessage,
         messages: [
           ...state.messages,
           {
@@ -25,6 +26,16 @@ const reducer = (state, action) => {
       };
     case 'setCurrentMessage':
       return { ...state, currentMessage: action.message };
+    case 'quoteMessage':
+      let quotedMessage = state.messages.find(
+        (message) => message.id === action.id,
+      );
+
+      return {
+        ...state,
+        currentMessage: `"${quotedMessage.content}" `,
+        highlightedMessageId: action.id,
+      };
     default:
       return state;
   }
