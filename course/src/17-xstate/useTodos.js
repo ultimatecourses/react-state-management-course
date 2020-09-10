@@ -11,22 +11,19 @@ const todosMachine = Machine({
   states: {
     initializing: {
       actions: {
-        todos: (ctx, e) => ctx.todos,
+        todos: (ctx) => ctx.todos,
       },
     },
   },
   on: {
     'TODO.TYPING': {
-      actions: assign({
-        todo: (ctx, target) => target.value,
-      }),
+      actions: assign({ todo: (ctx, target) => target.value }),
     },
     'TODOS.ADD': {
       actions: assign({
         todo: '',
         todos: (ctx, target) => [...ctx.todos, target.value],
       }),
-
       cond: (ctx, target) => target.value.trim().length,
     },
   },

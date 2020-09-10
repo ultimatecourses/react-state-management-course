@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from './19-apollo/App';
+import { App } from './current/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppContainer />
+    <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );
