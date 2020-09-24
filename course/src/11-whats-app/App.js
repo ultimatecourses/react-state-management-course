@@ -4,6 +4,12 @@ import { Input } from './Input';
 import { useFakeConvo } from './useFakeConvo';
 import { useScrollToBottom } from './useScrollToBottom';
 
+const initialMessages = [
+  { id: 1, content: 'Hello there!', from: 'me' },
+  { id: 2, content: 'How are you doing?', from: 'Steven' },
+  { id: 3, content: 'Pretty Good', from: 'me' },
+];
+
 export const App = () => {
   let [messages, setMessages] = useState(initialMessages);
   let [currentMessage, setCurrentMessage] = useState('');
